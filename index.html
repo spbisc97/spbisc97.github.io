@@ -1,0 +1,420 @@
+---
+layout: none
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simone – Personal Site</title>
+  <meta name="description" content="Portfolio and personal website for Simone." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #121c32;
+      --ink: #e6edf7;
+      --muted: #9eb3d8;
+      --accent: #7c5dff;
+      --accent-2: #1dd3b0;
+      --glow: rgba(124, 93, 255, 0.14);
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Space Grotesk', 'DM Sans', sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(124, 93, 255, 0.12), transparent 35%),
+                  radial-gradient(circle at 80% 0%, rgba(29, 211, 176, 0.12), transparent 35%),
+                  linear-gradient(135deg, #0b1324 0%, #0f172a 45%, #0b1324 100%);
+      color: var(--ink);
+      min-height: 100vh;
+      line-height: 1.6;
+      padding: 0 1.25rem 3rem;
+    }
+
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { color: var(--ink); }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.25rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .brand::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 20px var(--glow);
+    }
+
+    nav { display: flex; gap: 0.75rem; }
+
+    nav a {
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      color: var(--muted);
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      border-color: rgba(255, 255, 255, 0.08);
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    main { max-width: 1100px; margin: 0 auto; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem 0 1.5rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.4rem, 4vw, 3.2rem);
+      margin: 0 0 0.6rem;
+      letter-spacing: -0.02em;
+    }
+
+    .accent-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.65rem;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .accent-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-2);
+      border-radius: 50%;
+      box-shadow: 0 0 16px rgba(29, 211, 176, 0.5);
+    }
+
+    .hero p { color: var(--muted); margin: 0 0 1.1rem; }
+
+    .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+    .btn {
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.55rem 1rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.04);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border 0.18s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #0c1528;
+      border-color: transparent;
+      box-shadow: 0 10px 40px rgba(124, 93, 255, 0.3);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 25% 20%, rgba(124, 93, 255, 0.12), transparent 30%),
+                  radial-gradient(circle at 80% 80%, rgba(29, 211, 176, 0.11), transparent 28%);
+      opacity: 0.9;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0 0 0.85rem;
+      letter-spacing: 0.01em;
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .section-header span {
+      width: 16px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      display: inline-block;
+      border-radius: 999px;
+    }
+
+    .about-text { margin: 0; color: var(--muted); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card h3 { margin: 0 0 0.45rem; font-size: 1.1rem; }
+    .card p { margin: 0 0 0.75rem; color: var(--muted); }
+
+    .tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+    .tag {
+      padding: 0.25rem 0.55rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--muted);
+      font-size: 0.83rem;
+    }
+
+    .meta-row { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.28rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(29, 211, 176, 0.12);
+      color: #b5fff1;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    .wave { position: relative; }
+    .wave::after {
+      content: '~';
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.8rem; }
+    .timeline li { display: grid; gap: 0.3rem; }
+    .timeline strong { color: var(--ink); }
+    .timeline small { color: var(--muted); }
+
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 0.75rem;
+    }
+
+    .contact-card {
+      border-radius: var(--radius);
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      padding: 1rem;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    footer { margin: 2rem auto 0; max-width: 1100px; color: var(--muted); text-align: center; font-size: 0.95rem; }
+
+    @media (max-width: 720px) {
+      header { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
+      .cta-row { width: 100%; }
+      nav { width: 100%; flex-wrap: wrap; }
+      nav a { padding: 0.45rem 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Simone / Personal Site</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#now">Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <div class="accent-chip"><span class="accent-dot"></span>Available for select collaborations</div>
+        <h1>Simone crafts thoughtful products that balance clarity and momentum.</h1>
+        <p>I design and build web experiences with an emphasis on clean interfaces, fast performance, and considerate communication. Here you'll find a snapshot of what I'm exploring and shipping.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:you@example.com">Email me</a>
+          <a class="btn" href="#work">See work</a>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="section-header"><span></span>Quick profile</div>
+        <p class="about-text">Location, timezone, preferred tools, and a line on your working style. Swap this text with your own headline summary.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Strengths</h3>
+            <p>Product thinking, systems design, web performance, and crisp storytelling.</p>
+            <div class="tags">
+              <span class="tag">Planning</span>
+              <span class="tag">UI polish</span>
+              <span class="tag">Tech writing</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3>Toolbox</h3>
+            <p>TypeScript, React/Next.js, CSS, Node.js, Figma.</p>
+            <div class="tags">
+              <span class="tag">APIs</span>
+              <span class="tag">Design systems</span>
+              <span class="tag">Docs</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="panel">
+      <div class="section-header"><span></span>Selected work</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Project One</h3>
+          <p>Brief description of a project you shipped. Explain the impact and what you owned.</p>
+          <div class="meta-row">
+            <span class="pill">Case study</span>
+            <a href="#">View →</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Project Two</h3>
+          <p>Snapshot of an open-source contribution, side project, or experiment.</p>
+          <div class="meta-row">
+            <span class="pill">Open source</span>
+            <a href="#">View →</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Project Three</h3>
+          <p>Another highlight or a template for future work. Replace links and text anytime.</p>
+          <div class="meta-row">
+            <span class="pill">Prototype</span>
+            <a href="#">View →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="panel" style="margin-top: 1rem;">
+      <div class="section-header"><span></span>About</div>
+      <p class="about-text">Share how you approach problems, what environments you thrive in, and the values that matter to you. Keep it human: what do you care about building and who do you like to collaborate with?</p>
+      <ul class="timeline">
+        <li>
+          <strong>Current</strong>
+          <small>Role, company (or freelance), and your focus. Example: shipping thoughtful tools for creative teams.</small>
+        </li>
+        <li>
+          <strong>Previously</strong>
+          <small>Add a concise history: roles, industries, notable wins.</small>
+        </li>
+        <li>
+          <strong>Beyond work</strong>
+          <small>Interests, communities, or experiments that shape how you build.</small>
+        </li>
+      </ul>
+    </section>
+
+    <section id="now" class="panel" style="margin-top: 1rem;">
+      <div class="section-header"><span></span>Now</div>
+      <div class="grid">
+        <div class="card">
+          <h3>Building</h3>
+          <p>Describe what you're building this month. Example: a lean MVP to validate onboarding hypotheses.</p>
+          <div class="tags">
+            <span class="tag">In flight</span>
+            <span class="tag">Learning</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Reading</h3>
+          <p>Share books, podcasts, or research you're revisiting. Keep it fresh so returning visitors see movement.</p>
+          <div class="tags">
+            <span class="tag">Ideas</span>
+            <span class="tag">Signals</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Collaborating</h3>
+          <p>How people can work with you: consulting, product sprints, design critiques, or mentorship.</p>
+          <div class="tags">
+            <span class="tag">Availability</span>
+            <span class="tag">Remote-first</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel" style="margin-top: 1rem;">
+      <div class="section-header"><span></span>Contact</div>
+      <div class="contact">
+        <div class="contact-card">
+          <strong>Email</strong>
+          <p>Reach out for projects, collaborations, or a quick hello.</p>
+          <a href="mailto:you@example.com">you@example.com</a>
+        </div>
+        <div class="contact-card">
+          <strong>Social</strong>
+          <p>Link to LinkedIn, GitHub, Mastodon, or wherever you prefer to connect.</p>
+          <a href="#">Add profile link →</a>
+        </div>
+        <div class="contact-card">
+          <strong>Newsletter / RSS</strong>
+          <p>Optional: share updates or notes. Swap this with any other call-to-action.</p>
+          <a href="#">Subscribe →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>Built with care. Update the copy, links, and colors to make it yours.</div>
+  </footer>
+</body>
+</html>
