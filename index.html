@@ -7,414 +7,210 @@ layout: none
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simone Rotondi – Robotics & Soft Manipulation</title>
-  <meta name="description" content="Soft robotics researcher focusing on control, GNSS, and manipulation of soft materials." />
+  <meta name="description" content="Simone Rotondi is a PhD researcher at INRIA working on robotics, control, and soft manipulation." />
+  <meta property="og:title" content="Simone Rotondi – Robotics & Soft Manipulation" />
+  <meta property="og:description" content="PhD researcher at INRIA working on robots that manipulate flexible, non-rigid materials." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spbisc97.github.io/" />
+  <meta property="og:image" content="https://spbisc97.github.io/assets/img/placeholder-card.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --panel: #121c32;
-      --ink: #e6edf7;
-      --muted: #9eb3d8;
-      --accent: #7c5dff;
-      --accent-2: #1dd3b0;
-      --glow: rgba(124, 93, 255, 0.14);
-      --radius: 16px;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Space Grotesk', 'DM Sans', sans-serif;
-      background: radial-gradient(circle at 20% 20%, rgba(124, 93, 255, 0.12), transparent 35%),
-                  radial-gradient(circle at 80% 0%, rgba(29, 211, 176, 0.12), transparent 35%),
-                  linear-gradient(135deg, #0b1324 0%, #0f172a 45%, #0b1324 100%);
-      color: var(--ink);
-      min-height: 100vh;
-      line-height: 1.6;
-      padding: 0 1.25rem 3rem;
-    }
-
-    a { color: var(--accent-2); text-decoration: none; }
-    a:hover { color: var(--ink); }
-
-    header {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 1.25rem 0 0.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .brand {
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      font-size: 0.95rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .brand::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 0 20px var(--glow);
-    }
-
-    nav { display: flex; gap: 0.75rem; }
-
-    nav a {
-      padding: 0.45rem 0.85rem;
-      border-radius: 999px;
-      color: var(--muted);
-      border: 1px solid transparent;
-      transition: all 0.2s ease;
-    }
-
-    nav a:hover {
-      border-color: rgba(255, 255, 255, 0.08);
-      color: var(--ink);
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    main { max-width: 1100px; margin: 0 auto; }
-
-    .hero {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem 0 1.5rem;
-      align-items: center;
-    }
-
-    .hero-text h1 {
-      font-size: clamp(2.4rem, 4vw, 3.2rem);
-      margin: 0 0 0.6rem;
-      letter-spacing: -0.02em;
-    }
-
-    .accent-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.35rem 0.65rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 0.65rem;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .accent-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--accent-2);
-      border-radius: 50%;
-      box-shadow: 0 0 16px rgba(29, 211, 176, 0.5);
-    }
-
-    .hero p { color: var(--muted); margin: 0 0 1.1rem; }
-
-    .cta-row { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-
-    .btn {
-      border-radius: 12px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 0.55rem 1rem;
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      color: var(--ink);
-      background: rgba(255, 255, 255, 0.04);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border 0.18s ease;
-    }
-
-    .btn.primary {
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #0c1528;
-      border-color: transparent;
-      box-shadow: 0 10px 40px rgba(124, 93, 255, 0.3);
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .panel {
-      background: var(--panel);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: var(--radius);
-      padding: 1.3rem 1.4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .panel::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background: radial-gradient(circle at 25% 20%, rgba(124, 93, 255, 0.12), transparent 30%),
-                  radial-gradient(circle at 80% 80%, rgba(29, 211, 176, 0.11), transparent 28%);
-      opacity: 0.9;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0 0 0.85rem;
-      letter-spacing: 0.01em;
-      font-size: 0.95rem;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
-
-    .section-header span {
-      width: 16px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      display: inline-block;
-      border-radius: 999px;
-    }
-
-    .about-text { margin: 0; color: var(--muted); }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    .card {
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      border-radius: var(--radius);
-      padding: 1rem 1.1rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card h3 { margin: 0 0 0.45rem; font-size: 1.1rem; }
-    .card p { margin: 0 0 0.75rem; color: var(--muted); }
-
-    .tags { display: flex; gap: 0.35rem; flex-wrap: wrap; }
-    .tag {
-      padding: 0.25rem 0.55rem;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--muted);
-      font-size: 0.83rem;
-    }
-
-    .meta-row { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.28rem 0.65rem;
-      border-radius: 999px;
-      background: rgba(29, 211, 176, 0.12);
-      color: #b5fff1;
-      font-weight: 600;
-      font-size: 0.85rem;
-    }
-
-    .wave { position: relative; }
-    .wave::after {
-      content: '~';
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    .timeline { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.8rem; }
-    .timeline li { display: grid; gap: 0.3rem; }
-    .timeline strong { color: var(--ink); }
-    .timeline small { color: var(--muted); }
-
-    .contact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
-      margin-top: 0.75rem;
-    }
-
-    .contact-card {
-      border-radius: var(--radius);
-      border: 1px dashed rgba(255, 255, 255, 0.2);
-      padding: 1rem;
-      color: var(--muted);
-      background: rgba(255, 255, 255, 0.02);
-    }
-
-    footer { margin: 2rem auto 0; max-width: 1100px; color: var(--muted); text-align: center; font-size: 0.95rem; }
-
-    @media (max-width: 720px) {
-      header { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
-      .cta-row { width: 100%; }
-      nav { width: 100%; flex-wrap: wrap; }
-      nav a { padding: 0.45rem 0.7rem; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body>
-  <header>
-    <div class="brand">Simone Rotondi / Robotics</div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#now">Now</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<body id="top">
+  <header class="site-header">
+    <div class="page navbar">
+      <div class="brand">Simone Rotondi</div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="projects.html">Work / Projects</a>
+        <a href="#now">Now</a>
+        <a href="brainjuice.html">BrainJuice</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="utility-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">☀️</button>
+        <a class="mail-btn button-link" href="mailto:simone@example.com">Email me</a>
+      </div>
+    </div>
   </header>
 
-  <main>
+  <main class="page">
     <section class="hero">
-      <div class="hero-text">
-        <div class="accent-chip"><span class="accent-dot"></span>Robotics, control, and soft manipulation</div>
-        <h1>Ciao, I'm Simone. I explore how robots sense, adapt, and handle soft materials.</h1>
-        <p>My work centers on control, GNSS, and soft robotics. I'm a PhD researcher at INRIA in France studying manipulation of soft materials, drawing on experience across robotics, navigation, and applied AI.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="mailto:hello@simone.dev">Email me</a>
-          <a class="btn" href="https://github.com/spbisc97" target="_blank" rel="noopener">GitHub</a>
+      <div>
+        <div class="kicker">Robotics • Control • Soft manipulation</div>
+        <h1>Simone Rotondi – Robotics & Soft Manipulation</h1>
+        <p>I am a PhD researcher at INRIA (France) building robots that handle flexible, non-rigid materials. My work blends compliant control, sensing, and simulation-to-real tools.</p>
+        <div class="btn-row">
+          <a class="btn primary button-link" href="projects.html">View projects</a>
+          <a class="btn button-link" href="mailto:simone@example.com">Contact</a>
+          <a class="subtle-link" href="https://github.com/spbisc97">GitHub →</a>
         </div>
       </div>
-      <div class="panel">
-        <div class="section-header"><span></span>Quick profile</div>
-        <p class="about-text">Robotics researcher combining rigorous control with hands-on prototyping. Comfortable moving between lab experiments, code, and field testing.</p>
-        <div class="grid">
-          <div class="card">
-            <h3>Strengths</h3>
-            <p>Modeling and control of robotic systems, GNSS integration, and thoughtful communication that keeps teams aligned.</p>
-            <div class="tags">
-              <span class="tag">Control</span>
-              <span class="tag">GNSS</span>
-              <span class="tag">Soft robotics</span>
-            </div>
-          </div>
-          <div class="card">
-            <h3>Toolbox</h3>
-            <p>Python, ROS, simulation tools, and applied AI techniques paired with mechanical intuition.</p>
-            <div class="tags">
-              <span class="tag">Perception</span>
-              <span class="tag">Simulation</span>
-              <span class="tag">Automation</span>
-            </div>
-          </div>
+      <div class="section" style="margin:0;">
+        <header>
+          <h2>Quick profile</h2>
+          <p class="lead">Robotics researcher focused on control and applied AI.</p>
+        </header>
+        <ul class="bullet-grid">
+          <li>PhD at INRIA on soft manipulation and compliant control.</li>
+          <li>Background in GNSS/RTK navigation, robotic perception, and calibration.</li>
+          <li>Enjoy turning fuzzy ideas into experiments: sims, control loops, hardware.</li>
+          <li>Lead BrainJuiceClub conversations on human + machine intelligence.</li>
+        </ul>
+        <div style="margin-top:1rem;">
+          <strong>Toolbox:</strong>
+          <p>Python, ROS, C++ basics, simulation (Gazebo/Isaac), control, GNSS/RTK, sensing, quick automation.</p>
         </div>
       </div>
     </section>
 
-    <section id="work" class="panel">
-      <div class="section-header"><span></span>Selected work</div>
-      <div class="grid">
-        <div class="card">
-          <h3>Soft manipulation demos</h3>
-          <p>Lightweight showcases for gripping and handling pliable objects, highlighting sensing, control, and repeatability.</p>
-          <div class="meta-row">
-            <span class="pill">Static web</span>
-            <a href="https://github.com/spbisc97/spbisc97.github.io" target="_blank" rel="noopener">View →</a>
+    <section id="work" class="section">
+      <header>
+        <h2>Selected work</h2>
+        <p class="lead">A snapshot of ongoing and recent projects. See details on the projects page.</p>
+      </header>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Soft manipulation experiments</h3>
+          <p class="meta">Robots handling flexible materials with compliant control.</p>
+          <div class="badges">
+            <span class="badge">INRIA</span><span class="badge">Control</span><span class="badge">Simulation</span>
           </div>
-        </div>
-        <div class="card">
+          <a class="subtle-link" href="projects.html#soft-manipulation">View details →</a>
+        </article>
+        <article class="card">
+          <h3>RTK / GNSS navigation</h3>
+          <p class="meta">High-precision positioning projects for ANAS and ESA contexts.</p>
+          <div class="badges">
+            <span class="badge">GNSS/RTK</span><span class="badge">Navigation</span>
+          </div>
+          <a class="subtle-link" href="projects.html#rtk-gnss">View details →</a>
+        </article>
+        <article class="card">
           <h3>Robotics utilities</h3>
-          <p>Reusable scripts for calibration, data collection, and testing pipelines that keep experiments reliable.</p>
-          <div class="meta-row">
-            <span class="pill">Open source</span>
-            <a href="https://github.com/spbisc97?tab=repositories" target="_blank" rel="noopener">Browse repos →</a>
+          <p class="meta">Calibration scripts, data pipelines, and open-source tooling.</p>
+          <div class="badges">
+            <span class="badge">Open source</span><span class="badge">Automation</span>
           </div>
-        </div>
-        <div class="card">
-          <h3>Control experiments</h3>
-          <p>Prototyping control strategies that balance robustness and responsiveness for soft robotic systems.</p>
-          <div class="meta-row">
-            <span class="pill">Prototype</span>
-            <a href="#contact">Partner up →</a>
-          </div>
-        </div>
+          <a class="subtle-link" href="projects.html#utilities">View details →</a>
+        </article>
       </div>
     </section>
 
-    <section id="about" class="panel" style="margin-top: 1rem;">
-      <div class="section-header"><span></span>About</div>
-      <p class="about-text">I enjoy turning uncertain ideas into experiments that reveal how robots interact with the world. Careful iteration matters more to me than flashy demos, especially when exploring soft materials.</p>
-      <ul class="timeline">
-        <li>
-          <strong>Current</strong>
-          <small>PhD researcher at INRIA in France focusing on soft robotics and manipulation of soft materials, blending control, sensing, and automation.</small>
-        </li>
-        <li>
-          <strong>Previously</strong>
-          <small>Worked across robotics and navigation projects with GNSS, control, and AI-driven approaches to planning and perception.</small>
-        </li>
-        <li>
-          <strong>Beyond work</strong>
-          <small>Interested in soft robotics, intelligent systems, and sharing practical notes that help teams collaborate better.</small>
-        </li>
-      </ul>
-    </section>
-
-    <section id="now" class="panel" style="margin-top: 1rem;">
-      <div class="section-header"><span></span>Now</div>
-      <div class="grid">
-        <div class="card">
+    <section id="now" class="section">
+      <header>
+        <h2>Now</h2>
+        <p class="lead">What I’m focused on this month.</p>
+      </header>
+      <div class="now-grid">
+        <article class="card">
           <h3>Building</h3>
-          <p>Compact setups for soft robotic testing: control loops, sensing pipelines, and calibration tools.</p>
-          <div class="tags">
-            <span class="tag">In flight</span>
-            <span class="tag">Learning</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Reading</h3>
-          <p>Notes on soft manipulation, compliant control, and navigation techniques grounded in GNSS and perception.</p>
-          <div class="tags">
-            <span class="tag">Ideas</span>
-            <span class="tag">Signals</span>
-          </div>
-        </div>
-        <div class="card">
+          <p>Soft manipulation demos and sim-to-real control loops for deformable objects.</p>
+        </article>
+        <article class="card">
+          <h3>Learning</h3>
+          <p>Reading on compliant control, tactile sensing, and deformable object models.</p>
+        </article>
+        <article class="card">
           <h3>Collaborating</h3>
-          <p>Open to research exchanges, field tests, and workshops that bridge robotics, control, and AI.</p>
-          <div class="tags">
-            <span class="tag">Availability</span>
-            <span class="tag">Remote-first</span>
-          </div>
-        </div>
+          <p>Open to research exchanges, code reviews, and BrainJuice conversations.</p>
+        </article>
       </div>
     </section>
 
-    <section id="contact" class="panel" style="margin-top: 1rem;">
-      <div class="section-header"><span></span>Contact</div>
-      <div class="contact">
+    <section id="about" class="section">
+      <header>
+        <h2>About</h2>
+        <p class="lead">From control theory to soft robotics – building practical, testable tools.</p>
+      </header>
+      <div class="profile-block">
+        <div>
+          <p>I work at the intersection of robotics, control, and applied AI. I enjoy translating theory into experiments: simulations, calibration routines, and small robotic setups that let ideas move quickly. Soft materials fascinate me because they force robots to be adaptive—compliant control, sensing, and perception all at once.</p>
+          <p>I’ve contributed to GNSS/RTK navigation projects, built tools for data collection and calibration, and now focus on soft manipulation at INRIA. I value clear thinking, fast iteration, and collaboration.</p>
+          <ul class="timeline">
+            <li><strong>PhD at INRIA</strong><br />Soft manipulation research, compliant control, sim-to-real.</li>
+            <li><strong>RTK / GNSS work</strong><br />Projects with ANAS and ESA contexts on precision navigation.</li>
+            <li><strong>Earlier</strong><br />Control theory foundations, robotics projects, and BrainJuiceClub.</li>
+          </ul>
+        </div>
+        <div class="profile-photo">Add your photo<br /><small>(assets/img/profile.jpg)</small></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <header>
+        <h2>Contact</h2>
+        <p class="lead">Let’s talk about collaborations, research exchanges, or casual conversations.</p>
+      </header>
+      <div class="contact-grid">
         <div class="contact-card">
-          <strong>Email</strong>
-          <p>Reach out for projects, collaborations, or a quick hello.</p>
-          <a href="mailto:hello@simone.dev">hello@simone.dev</a>
+          <h3>Direct</h3>
+          <p>Email: <a href="mailto:simone@example.com">simone@example.com</a></p>
+          <p>GitHub: <a href="https://github.com/spbisc97">@spbisc97</a></p>
+          <p>LinkedIn: <a href="#">Add link</a> · Instagram/BrainJuice: <a href="#">@brainjuiceclub</a></p>
         </div>
         <div class="contact-card">
-          <strong>Social</strong>
-          <p>Follow along on GitHub for changelogs, experiments, and open-source utilities.</p>
-          <a href="https://github.com/spbisc97" target="_blank" rel="noopener">github.com/spbisc97 →</a>
-        </div>
-        <div class="contact-card">
-          <strong>Newsletter / RSS</strong>
-          <p>Occasional notes on tooling and product thinking. Swap this with any other call-to-action.</p>
-          <a href="#work">Latest highlights →</a>
+          <h3>Contact form</h3>
+          <form class="form" method="POST" action="https://formspree.io/f/your-form-id"><!-- TODO: replace Formspree endpoint -->
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="How can we collaborate?" required></textarea>
+            <button class="btn primary" type="submit">Send</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div>Built with care. If you enjoy the work here, feel free to reach out.</div>
+  <footer class="page">
+    <div>© <span id="year"></span> Simone Rotondi • Built with care on GitHub Pages. <a class="top-link" href="#top">Back to top</a></div>
   </footer>
+
+  <script>
+    // Theme toggle with localStorage
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (storedTheme) body.setAttribute('data-theme', storedTheme);
+    else if (prefersDark) body.setAttribute('data-theme', 'dark');
+
+    function updateThemeIcon() {
+      const isDark = body.getAttribute('data-theme') === 'dark';
+      themeToggle.textContent = isDark ? '🌙' : '☀️';
+      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+
+    function toggleTheme() {
+      const isDark = body.getAttribute('data-theme') === 'dark';
+      const newTheme = isDark ? 'light' : 'dark';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateThemeIcon();
+    }
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+    updateThemeIcon();
+
+    // Mobile nav toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen);
+      });
+    }
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

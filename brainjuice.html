@@ -1,0 +1,152 @@
+---
+layout: none
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BrainJuice – Simone Rotondi</title>
+  <meta name="description" content="BrainJuiceClub: conversations on artificial and human intelligence." />
+  <meta property="og:title" content="BrainJuice – Simone Rotondi" />
+  <meta property="og:description" content="A group exploring AI, cognition, robotics, and the human side of intelligence." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spbisc97.github.io/brainjuice.html" />
+  <meta property="og:image" content="https://spbisc97.github.io/assets/img/placeholder-card.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="page navbar">
+      <div class="brand">Simone Rotondi</div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="projects.html">Work / Projects</a>
+        <a href="index.html#now">Now</a>
+        <a href="brainjuice.html">BrainJuice</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="utility-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">☀️</button>
+        <a class="mail-btn button-link" href="mailto:simone@example.com">Email me</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section">
+      <header>
+        <h1>BrainJuice / BrainJuiceClub</h1>
+        <p class="lead">A space to discuss artificial and human intelligence—practical, curious, and open to anyone who wants to build or think alongside us.</p>
+      </header>
+      <div class="btn-row">
+        <a class="btn primary button-link" href="mailto:simone@example.com">Reach out</a>
+        <a class="btn button-link" href="#notes">Jump to notes</a>
+        <a class="subtle-link" href="https://instagram.com/brainjuiceclub">Instagram placeholder →</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2>What is BrainJuice?</h2>
+      </header>
+      <p>BrainJuice is a small group for conversations on intelligence—how machines learn, how humans reason, and how the two intersect. We share experiments, reading lists, and practical prompts for builders and researchers.</p>
+    </section>
+
+    <section class="section">
+      <header><h2>Topics we explore</h2></header>
+      <ul class="bullet-grid">
+        <li>Robotics, control, and embodied intelligence.</li>
+        <li>Cognition, perception, and learning systems.</li>
+        <li>Philosophy of mind and human-computer collaboration.</li>
+        <li>Tools, simulations, and hands-on experiments.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <header><h2>Formats</h2></header>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Meetups</h3>
+          <p>Small in-person sessions around robotics labs, cafés, or studios.</p>
+        </article>
+        <article class="card">
+          <h3>Online calls</h3>
+          <p>Lightweight virtual discussions to share experiments and readings.</p>
+        </article>
+        <article class="card">
+          <h3>Content</h3>
+          <p>Instagram/other platforms for short thoughts, links, and prompts.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <header><h2>Get involved</h2></header>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Join</h3>
+          <p>Send a note with what you’re curious about. We’ll loop you into calls or meetups.</p>
+          <p>Email: <a href="mailto:simone@example.com">simone@example.com</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Follow</h3>
+          <p>Instagram: <a href="https://instagram.com/brainjuiceclub">@brainjuiceclub</a></p>
+          <p>Newsletter / RSS: <a href="#">Add link placeholder</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Contribute</h3>
+          <p>Share reading lists, demos, or questions to explore together.</p>
+          <p><a href="mailto:simone@example.com">Email to share</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="notes" class="section">
+      <header>
+        <h2>Notes & links</h2>
+        <p class="lead">Future-friendly section for short posts or thought starters. Add more items as you publish.</p>
+      </header>
+      <ul class="note-list">
+        <li>
+          <time datetime="2024-01-01">Date placeholder</time>
+          <strong>Title placeholder</strong>
+          <p>A brief description of a discussion topic, meetup, or article you want to share.</p>
+          <a class="subtle-link" href="#">Read more →</a>
+        </li>
+        <li>
+          <time datetime="2024-02-01">Date placeholder</time>
+          <strong>Another note</strong>
+          <p>Use this space for future micro-posts or resource drops.</p>
+          <a class="subtle-link" href="#">Read more →</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page">
+    <div>© <span id="year"></span> Simone Rotondi • Built with care on GitHub Pages. <a class="top-link" href="#top">Back to top</a></div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (storedTheme) body.setAttribute('data-theme', storedTheme); else if (prefersDark) body.setAttribute('data-theme', 'dark');
+    function updateThemeIcon() { const isDark = body.getAttribute('data-theme') === 'dark'; themeToggle.textContent = isDark ? '🌙' : '☀️'; themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme'); }
+    function toggleTheme() { const isDark = body.getAttribute('data-theme') === 'dark'; const newTheme = isDark ? 'light' : 'dark'; body.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); updateThemeIcon(); }
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme); updateThemeIcon();
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (menuToggle && navLinks) { menuToggle.addEventListener('click', () => { const isOpen = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', isOpen); }); }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

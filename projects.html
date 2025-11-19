@@ -1,0 +1,169 @@
+---
+layout: none
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – Simone Rotondi</title>
+  <meta name="description" content="Selected robotics and control projects by Simone Rotondi." />
+  <meta property="og:title" content="Projects – Simone Rotondi" />
+  <meta property="og:description" content="Soft manipulation experiments, RTK/GNSS navigation, and robotics utilities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spbisc97.github.io/projects.html" />
+  <meta property="og:image" content="https://spbisc97.github.io/assets/img/placeholder-card.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body id="top">
+  <header class="site-header">
+    <div class="page navbar">
+      <div class="brand">Simone Rotondi</div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="projects.html">Work / Projects</a>
+        <a href="index.html#now">Now</a>
+        <a href="brainjuice.html">BrainJuice</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="utility-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">☀️</button>
+        <a class="mail-btn button-link" href="mailto:simone@example.com">Email me</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section">
+      <header>
+        <h1>Projects</h1>
+        <p class="lead">Selected work across soft manipulation, navigation, and robotics tooling. Update any links or details as you publish more.</p>
+      </header>
+      <div class="btn-row">
+        <a class="btn primary button-link" href="mailto:simone@example.com">Get in touch</a>
+        <a class="btn button-link" href="https://github.com/spbisc97">GitHub profile</a>
+      </div>
+    </section>
+
+    <section id="soft-manipulation" class="section">
+      <header>
+        <h2>Soft manipulation experiments at INRIA</h2>
+        <p class="lead">Robots manipulating flexible and soft objects with compliant control, sensing, and simulation-to-real workflows.</p>
+      </header>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Overview</h3>
+          <p>Researching strategies for handling deformable objects with precise yet adaptive control. Building pipelines that span simulation, perception, and real hardware.</p>
+          <ul class="timeline">
+            <li>Designed compliant control loops and safety constraints for soft-object tasks.</li>
+            <li>Built data collection and calibration utilities for tactile/vision sensors.</li>
+            <li>Iterated on sim-to-real transfer with domain randomization and validation steps.</li>
+          </ul>
+          <div class="badges"><span class="badge">Control</span><span class="badge">Perception</span><span class="badge">Sim2Real</span></div>
+        </article>
+        <article class="card">
+          <h3>Useful links</h3>
+          <p class="meta">Placeholders to swap with your own references.</p>
+          <ul class="timeline">
+            <li><a href="#">GitHub repo →</a></li>
+            <li><a href="#">PDF / slides →</a></li>
+            <li><a href="#">Demo video →</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="rtk-gnss" class="section">
+      <header>
+        <h2>RTK / GNSS projects for ANAS and ESA</h2>
+        <p class="lead">High-precision positioning, control, and navigation in infrastructure and space-related environments.</p>
+      </header>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Highlights</h3>
+          <p>Developed GNSS/RTK pipelines for reliable localization in challenging settings, integrating sensor fusion and control logic.</p>
+          <ul class="timeline">
+            <li>Configured RTK corrections and monitoring for on-site deployments.</li>
+            <li>Improved navigation stability via filtering, calibration, and fault detection.</li>
+            <li>Documented playbooks for reproducible field testing and data review.</li>
+          </ul>
+          <div class="badges"><span class="badge">GNSS</span><span class="badge">RTK</span><span class="badge">Navigation</span></div>
+        </article>
+        <article class="card">
+          <h3>Useful links</h3>
+          <p class="meta">Add references when ready.</p>
+          <ul class="timeline">
+            <li><a href="#">GitHub repo →</a></li>
+            <li><a href="#">PDF / slides →</a></li>
+            <li><a href="#">Demo video →</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="utilities" class="section">
+      <header>
+        <h2>Robotics utilities and open source</h2>
+        <p class="lead">Calibration scripts, data pipelines, and helper tools to support experiments and quick iterations.</p>
+      </header>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Toolkit</h3>
+          <p>Small utilities for ROS bag processing, sensor alignment, and quick automation. Meant to accelerate experimentation and reproducibility.</p>
+          <ul class="timeline">
+            <li>Sensor calibration helpers (extrinsics, timestamp alignment).</li>
+            <li>Data collection templates and logging dashboards.</li>
+            <li>Reusable scripts for plotting, validation, and experiment bookkeeping.</li>
+          </ul>
+          <div class="badges"><span class="badge">ROS</span><span class="badge">Python</span><span class="badge">Automation</span></div>
+        </article>
+        <article class="card">
+          <h3>Useful links</h3>
+          <p class="meta">Swap these placeholders with your repos and docs.</p>
+          <ul class="timeline">
+            <li><a href="#">GitHub repo →</a></li>
+            <li><a href="#">PDF / slides →</a></li>
+            <li><a href="#">Demo video →</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2>Want a deeper dive?</h2>
+        <p class="lead">I’m happy to share notes, datasets, or code snippets. Reach out and tell me what you’re exploring.</p>
+      </header>
+      <div class="btn-row">
+        <a class="btn primary button-link" href="mailto:simone@example.com">Email Simone</a>
+        <a class="btn button-link" href="index.html">Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page">
+    <div>© <span id="year"></span> Simone Rotondi • Built with care on GitHub Pages. <a class="top-link" href="#top">Back to top</a></div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (storedTheme) body.setAttribute('data-theme', storedTheme); else if (prefersDark) body.setAttribute('data-theme', 'dark');
+    function updateThemeIcon() { const isDark = body.getAttribute('data-theme') === 'dark'; themeToggle.textContent = isDark ? '🌙' : '☀️'; themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme'); }
+    function toggleTheme() { const isDark = body.getAttribute('data-theme') === 'dark'; const newTheme = isDark ? 'light' : 'dark'; body.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); updateThemeIcon(); }
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme); updateThemeIcon();
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (menuToggle && navLinks) { menuToggle.addEventListener('click', () => { const isOpen = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', isOpen); }); }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
