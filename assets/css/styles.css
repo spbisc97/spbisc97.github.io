@@ -277,11 +277,8 @@ header.site-header {
   aspect-ratio: 1/1;
   background: #e5e7eb;
   border-radius: var(--radius);
-  border: 1px dashed var(--line);
-  display: grid;
-  place-items: center;
-  color: var(--muted);
-  font-weight: 600;
+  border: 1px solid var(--line);
+  object-fit: cover;
 }
 
 .contact-grid {
