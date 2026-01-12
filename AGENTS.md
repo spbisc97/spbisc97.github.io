@@ -1,32 +1,46 @@
-# Repository Guidelines
+# Repository Overview: Simone Rotondi's Personal Website
 
-## Project Structure & Module Organization
-- `index.html` – home/landing with hero, about, selected work, now, and contact.
-- `projects.html` – detailed project writeups and links.
-- `brainjuice.html` – BrainJuice overview and notes placeholders.
-- `assets/css/styles.css` – shared styling; accent color lives in `:root --accent`.
-- `assets/img/` – add your own images (e.g., `profile.jpg`, OG/thumb assets).
-- `_config.yml` – GitHub Pages/Jekyll config (minimal theme, title/description).
+## 1. The Point of this Repo
+This repository hosts the source code for the personal website of **Simone Rotondi**, a PhD researcher at INRIA specializing in robotics, control, and soft manipulation. 
 
-## Build, Test, and Development Commands
-- Static site; no build step required. Open `index.html` in a browser or use a simple server: `python -m http.server 8000`.
-- GitHub Pages deploys from `main` automatically after pushes.
+**Primary Goals:**
+-   **Portfolio:** Showcase academic work and research projects (Soft Manipulation, GNSS/RTK, Robotics Utilities).
+-   **Professional Presence:** Provide a biography ("About"), current status ("Now"), and contact information.
+-   **Community Hub:** Host the "BrainJuice" section, a space for discussions on artificial and human intelligence (`brainjuice.html`).
 
-## Coding Style & Naming Conventions
-- HTML: semantic sections (`header`, `nav`, `main`, `section`, `article`, `footer`), ordered headings, ARIA labels for toggles.
-- CSS: keep variables in `:root`, prefer utility classes already present (cards, grids, buttons). Use 2-space indentation.
-- JS: minimal vanilla scripts; keep theme/menu logic unobtrusive and placed at the bottom of the page.
-- Paths: keep assets under `assets/` (e.g., `assets/img/<name>.png`).
+**Technical Approach:**
+-   **Static Site:** Hosted on GitHub Pages.
+-   **Simplicity:** Pure HTML/CSS with minimal Vanilla JS (no complex build chain).
+-   **Accessibility & UX:** Responsive design, dark/light mode support, and semantic HTML.
 
-## Testing Guidelines
-- No automated tests yet; for changes, manually verify on mobile and desktop, check dark/light mode, nav toggle, and Formspree placeholder.
-- If adding scripts, test in modern browsers and ensure no console errors.
+## 2. Structure
+The repository is organized for simplicity and ease of maintenance.
 
-## Commit & Pull Request Guidelines
-- Commit messages: short imperative summaries (e.g., “Add project cards”, “Tweak accent color”). Current history uses concise, action-led messages.
-- PRs (if opened): include a brief description, screenshots of key sections (light/dark + mobile/desktop) for UI changes, and note any new links/endpoints (e.g., Formspree).
+### Core Files
+-   `index.html`: **Main Landing Page**. Contains the Hero section, About, Selected Work, Now page, and Contact form.
+-   `projects.html`: **Detailed Projects**. Expanded descriptions of research work (e.g., Soft Manipulation experiments, RTK navigation).
+-   `brainjuice.html`: **Community Page**. Overview of the BrainJuiceClub, including topics, formats, and notes/links.
+-   `_config.yml`: **GitHub Pages Config**. Sets the site title, description, and Jekyll theme (currently `jekyll-theme-minimal`, mainly for metadata defaults).
 
-## Security & Configuration Tips
-- Replace `simone@example.com` and other placeholder links before publishing.
-- Update Formspree `action` URL in `index.html` for the contact form, or remove the form if unused.
-- Keep OG image URLs valid; replace `assets/img/placeholder-card.png` with a real asset and adjust meta tags if renamed.
+### Assets (`/assets`)
+-   `css/styles.css`: **Global Styles**. Handles layout, typography, and theming. 
+    -   *Key:* The `:root` selector defines CSS variables (colors, fonts) for easy theming (e.g., `--accent` color).
+-   `img/`: **Images**. Stores static assets like profile photos (`simone_sapienza.jpeg`), logos (`logo.ico`), and placeholders.
+
+## 3. Development & Maintenance
+Since this is a static site, no build process is strictly required for local development.
+
+### How to Run
+-   **Simple Server:** Run `python3 -m http.server 8000` in the root directory and visit `http://localhost:8000`.
+-   **Deployment:** Changes pushed to the `main` branch are automatically deployed by GitHub Pages.
+
+### Customization Guide
+-   **Content Updates:** Edit the HTML files directly. Look for comment markers or clear section tags (`<section id="now">`).
+-   **Styling:** Modify `assets/css/styles.css`. 
+    -   *Theme:* Dark/Light mode logic is handled in the inline `<script>` at the bottom of each HTML page and persists via `localStorage`.
+-   **Contact Form:** The form in `index.html` points to a Formspree endpoint. Update the `action` URL if the endpoint changes.
+
+## 4. Guidelines for AI Agents & Contributors
+-   **Code Style:** Maintain the existing indentation (2 spaces) and semantic HTML structure.
+-   **CSS:** Use existing utility classes where possible (e.g., `.card`, `.btn`, `.section`) to maintain visual consistency.
+-   **Navigation:** If adding a new page, ensure it is linked in the `<nav>` section of `index.html` and the specific page's header.
