@@ -3,23 +3,29 @@ layout: none
 ---
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Simone Rotondi – Robotics & Soft Manipulation</title>
-  <meta name="description" content="Simone Rotondi is a PhD researcher at INRIA working on robotics, control, and soft manipulation." />
+  <meta name="description"
+    content="Simone Rotondi is a PhD researcher at INRIA working on robotics, control, and soft manipulation." />
   <meta property="og:title" content="Simone Rotondi – Robotics & Soft Manipulation" />
-  <meta property="og:description" content="PhD researcher at INRIA working on robots that manipulate flexible, non-rigid materials." />
+  <meta property="og:description"
+    content="PhD researcher at INRIA working on robots that manipulate flexible, non-rigid materials." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://spbisc97.github.io/" />
   <meta property="og:image" content="https://spbisc97.github.io/assets/img/placeholder-card.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="icon" type="image/x-icon" href="assets/img/logo.ico" />
   <meta name="google-site-verification" content="86_qqDxG4KlfpLFeAF60vMhBOTJp7Wowuc5Jzuk1r5s" />
 </head>
+
 <body id="top">
   <header class="site-header">
     <div class="page navbar">
@@ -43,30 +49,21 @@ layout: none
 
   <main class="page">
     <section class="hero">
-      <div>
-        <div class="kicker">Robotics • Control • Soft manipulation</div>
-        <h1>Simone Rotondi – Robotics & Soft Manipulation</h1>
-        <p>I am a PhD researcher at INRIA (France) building robots that handle flexible, non-rigid materials. My work blends compliant control, sensing, and simulation-to-real tools.</p>
-        <div class="btn-row">
-          <a class="btn primary button-link" href="projects.html">View projects</a>
-          <a class="btn button-link" href="mailto:rotondi97simone+git@gmail.com">Contact</a>
-          <a class="subtle-link" href="https://github.com/spbisc97">GitHub →</a>
+      <div class="hero-layout">
+        <div>
+          <h1>Simone Rotondi</h1>
+          <p class="lead" style="color: var(--ink);">
+            Robotics engineer focused on control, soft manipulation, and building reliable tools.
+          </p>
+
+          <div class="intro-links" style="margin-top: 1.5rem;">
+            <a href="#work">Work</a> /
+            <a href="#about">About</a> /
+            <a href="projects.html">Projects</a>
+          </div>
         </div>
-      </div>
-      <div class="section" style="margin:0;">
-        <header>
-          <h2>Quick profile</h2>
-          <p class="lead">Robotics researcher focused on control and applied AI.</p>
-        </header>
-        <ul class="bullet-grid">
-          <li>PhD at INRIA on soft manipulation and compliant control.</li>
-          <li>Background in GNSS/RTK navigation, robotic perception, and calibration.</li>
-          <li>Enjoy turning fuzzy ideas into experiments: sims, control loops, hardware.</li>
-          <li>Lead BrainJuiceClub conversations on human + machine intelligence.</li>
-        </ul>
-        <div style="margin-top:1rem;">
-          <strong>Toolbox:</strong>
-          <p>Python, ROS, C++ basics, simulation (Gazebo/Isaac), control, GNSS/RTK, sensing, quick automation.</p>
+        <div>
+          <img src="assets/img/simone_sapienza.jpeg" alt="Simone Rotondi" class="hero-image" />
         </div>
       </div>
     </section>
@@ -74,74 +71,50 @@ layout: none
     <section id="work" class="section">
       <header>
         <h2>Selected work</h2>
-        <p class="lead">A snapshot of ongoing and recent projects. See details on the projects page.</p>
       </header>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Soft manipulation experiments</h3>
-          <p class="meta">Robots handling flexible materials with compliant control.</p>
-          <div class="badges">
-            <span class="badge">INRIA</span><span class="badge">Control</span><span class="badge">Simulation</span>
-          </div>
-          <a class="subtle-link" href="projects.html#soft-manipulation">View details →</a>
-        </article>
-        <article class="card">
-          <h3>RTK / GNSS navigation</h3>
-          <p class="meta">High-precision positioning projects for ANAS and ESA contexts.</p>
-          <div class="badges">
-            <span class="badge">GNSS/RTK</span><span class="badge">Navigation</span>
-          </div>
-          <a class="subtle-link" href="projects.html#rtk-gnss">View details →</a>
-        </article>
-        <article class="card">
-          <h3>Robotics utilities</h3>
-          <p class="meta">Calibration scripts, data pipelines, and open-source tooling.</p>
-          <div class="badges">
-            <span class="badge">Open source</span><span class="badge">Automation</span>
-          </div>
-          <a class="subtle-link" href="projects.html#utilities">View details →</a>
-        </article>
-      </div>
+      <ul class="clean-list">
+        <li>
+          <h3><a href="projects.html#soft-manipulation">Soft manipulation experiments</a></h3>
+          <p>Robots handling flexible materials with compliant control.</p>
+        </li>
+        <li>
+          <h3><a href="projects.html#rtk-gnss">RTK / GNSS navigation</a></h3>
+          <p>High-precision positioning projects for ANAS and ESA contexts.</p>
+        </li>
+        <li>
+          <h3><a href="projects.html#utilities">Robotics utilities</a></h3>
+          <p>Calibration scripts, data pipelines, and open-source tooling.</p>
+        </li>
+      </ul>
     </section>
 
     <section id="now" class="section">
       <header>
         <h2>Now</h2>
-        <p class="lead">What I’m focused on this month.</p>
       </header>
-      <div class="now-grid">
-        <article class="card">
+      <ul class="clean-list">
+        <li>
           <h3>Building</h3>
-          <p>Soft manipulation demos and sim-to-real control loops for deformable objects.</p>
-        </article>
-        <article class="card">
+          <p>Soft manipulation demos and sim-to-real control loops.</p>
+        </li>
+        <li>
           <h3>Learning</h3>
-          <p>Reading on compliant control, tactile sensing, and deformable object models.</p>
-        </article>
-        <article class="card">
-          <h3>Collaborating</h3>
-          <p>Open to research exchanges, code reviews, and BrainJuice conversations.</p>
-        </article>
-      </div>
+          <p>Reading on compliant control and deformable object models.</p>
+        </li>
+      </ul>
     </section>
 
     <section id="about" class="section">
       <header>
         <h2>About</h2>
-        <p class="lead">From control theory to soft robotics – building practical, testable tools.</p>
       </header>
       <div class="profile-block">
         <div>
-          <p>I work at the intersection of robotics, control, and applied AI. I enjoy translating theory into experiments: simulations, calibration routines, and small robotic setups that let ideas move quickly. Soft materials fascinate me because they force robots to be adaptive—compliant control, sensing, and perception all at once.</p>
-          <p>I’ve contributed to GNSS/RTK navigation projects, built tools for data collection and calibration, and now focus on soft manipulation at INRIA. I value clear thinking, fast iteration, and collaboration.</p>
-          <ul class="timeline">
-            <li><strong>PhD at INRIA</strong><br />Soft manipulation research, compliant control, sim-to-real.</li>
-            <li><strong>RTK / GNSS work</strong><br />Projects with ANAS and ESA contexts on precision navigation.</li>
-            <li><strong>Earlier</strong><br />Control theory foundations, robotics projects, and BrainJuiceClub.</li>
-          </ul>
-        </div>
-        <div>
-          <img class="profile-photo" src="assets/img/simone_sapienza.jpeg" alt="Simone Rotondi profile photo" />
+          <p>
+            I specialize in the intersection of <strong>control theory</strong> and <strong>soft robotics</strong>.
+            My goal is to make soft systems as reliable and controllable as rigid ones.
+          </p>
+          <p>Currently based in Italy.</p>
         </div>
       </div>
     </section>
@@ -149,35 +122,17 @@ layout: none
     <section id="contact" class="section">
       <header>
         <h2>Contact</h2>
-        <p class="lead">Let’s talk about collaborations, research exchanges, or casual conversations.</p>
       </header>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>Direct</h3>
-          <p>Email: <a href="mailto:rotondi97simone+git@gmail.com">rotondi97simone+git@gmail.com</a></p>
-          <p>GitHub: <a href="https://github.com/spbisc97">@spbisc97</a></p>
-          <p>LinkedIn: <a href="https://www.linkedin.com/in/simone-rotondi/">simone-rotondi</a></p>
-          <p>BrainJuice: <a href="#">@brainjuiceclub</a></p>
-        </div>
-        <div class="contact-card">
-          <h3>Contact form</h3>
-          <form class="form" method="POST" action="https://formspree.io/f/mjkdzoog"><!-- Formspree endpoint -->
-            <input type="hidden" name="_subject" value="New message from spbisc97.github.io" />
-            <label for="name">Name</label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="How can we collaborate?" required></textarea>
-            <button class="btn primary" type="submit">Send</button>
-          </form>
-        </div>
-      </div>
+      <p>
+        Email: <a href="mailto:rotondi97simone+git@gmail.com">rotondi97simone+git@gmail.com</a><br />
+        GitHub: <a href="https://github.com/spbisc97">@spbisc97</a>
+      </p>
     </section>
   </main>
 
   <footer class="page">
-    <div>© <span id="year"></span> Simone Rotondi • Built with care on GitHub Pages. <a class="top-link" href="#top">Back to top</a></div>
+    <div>© <span id="year"></span> Simone Rotondi • Built with care on GitHub Pages. <a class="top-link"
+        href="#top">Back to top</a></div>
   </footer>
 
   <script>
@@ -219,4 +174,5 @@ layout: none
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
