@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects – Simone Rotondi</title>
   <meta name="description"
-    content="Selected robotics and control projects by Simone Rotondi, including a PID teaching demonstrator, multiple-shooting work, and robotics prototypes." />
+    content="Selected robotics and control projects by Simone Rotondi, including a PID teaching demonstrator, multiple-shooting work, and nonlinear optimal control prototypes." />
   <meta name="keywords"
     content="robotics projects, control, colored ball balancing, multiple shooting, embodied intelligence, Simone Rotondi" />
   <meta name="robots" content="index, follow" />
@@ -121,20 +121,30 @@
       </ul>
     </section>
 
-    <section id="utilities" class="section">
+    <section id="wip-arms" class="section">
       <header>
-        <h2>WIP-ARMS</h2>
-        <p>Work-in-progress robotics project for ongoing development and prototyping.</p>
+        <h2>WIP-ARMS / ILQR-GNMS</h2>
+        <p>Iterative Gauss-Newton shooting methods for nonlinear optimal control.</p>
       </header>
       <ul class="clean-list">
         <li>
           <h3>What this project is about</h3>
-          <p>Current exploratory repository where new ideas are tested and progressively structured.</p>
+          <p>
+            A repository for implementing and testing iterative shooting methods for nonlinear optimal control, with
+            examples built around underactuated benchmark systems.
+          </p>
           <ul>
-            <li>Rapid iteration on robotics components.</li>
-            <li>Practical code organization that can evolve over time.</li>
-            <li>Useful sandbox for future publication-ready work.</li>
+            <li>MATLAB implementation of iLQR / Gauss-Newton shooting workflows.</li>
+            <li>Simulation examples for cart-pole swing-up and two-wheeled inverted-pendulum systems.</li>
+            <li>Julia and MeshCat material for visualizing inverted-pendulum behavior.</li>
           </ul>
+        </li>
+        <li>
+          <h3>Why it matters</h3>
+          <p>
+            The project is useful as a bridge between optimal-control algorithms and physical intuition: the same
+            solver structure can be inspected in code, tested in simulation, and related to familiar unstable systems.
+          </p>
         </li>
         <li>
           <h3>Repository</h3>
