@@ -1,6 +1,3 @@
----
-layout: none
----
 <!doctype html>
 <html lang="en">
 
@@ -9,14 +6,14 @@ layout: none
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects – Simone Rotondi</title>
   <meta name="description"
-    content="Selected robotics and control projects by Simone Rotondi, including Colored Ball Balancing, 3LinerLeaderLess, and WIP-ARMS." />
+    content="Selected robotics and control projects by Simone Rotondi, including a PID teaching demonstrator, multiple-shooting work, and robotics prototypes." />
   <meta name="keywords"
     content="robotics projects, control, colored ball balancing, multiple shooting, embodied intelligence, Simone Rotondi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://spbisc97.github.io/projects.html" />
   <meta property="og:title" content="Projects – Simone Rotondi" />
   <meta property="og:description"
-    content="Selected open-source robotics and control projects with links to GitHub repositories." />
+    content="Selected open-source robotics and control projects, from teaching demos to research prototypes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://spbisc97.github.io/projects.html" />
   <meta property="og:image" content="https://spbisc97.github.io/assets/img/placeholder-card.png" />
@@ -55,8 +52,8 @@ layout: none
     <section class="section">
       <header>
         <h1>Projects</h1>
-        <p class="lead">A readable overview of selected projects. Most work is documented directly on GitHub so it is
-          easy to inspect, reuse, and extend.</p>
+        <p class="lead">A readable overview of selected projects: research code, physical demos, and open repositories
+          that make control and robotics easier to inspect, reuse, and explain.</p>
       </header>
       <div class="btn-row">
         <a class="btn primary button-link" href="mailto:rotondi97simone+git@gmail.com">Get in touch</a>
@@ -65,23 +62,31 @@ layout: none
       </div>
     </section>
 
-    <section id="soft-manipulation" class="section">
+    <section id="colored-ball-balancing" class="section">
       <header>
         <h2>Colored Ball Balancing (NIKE)</h2>
-        <p>Control-focused project centered on balancing behavior in a physical setup.</p>
+        <p>A physical PID demonstrator for making feedback control visible and memorable.</p>
       </header>
       <ul class="clean-list">
         <li>
           <h3>What this project is about</h3>
           <p>
-            A practical project exploring how to build stable, repeatable balancing behavior for a dynamic physical
-            task.
+            A compact balancing setup built around a colored ball, where students can connect the P, I, and D terms
+            of a controller with the response of a real physical system.
           </p>
           <ul>
-            <li>Emphasis on control quality and robustness.</li>
-            <li>Project structure kept simple and readable for future iterations.</li>
-            <li>Open repository for transparent development.</li>
+            <li>Makes overshoot, settling time, and steady-state error easier to discuss.</li>
+            <li>Keeps the control problem concrete, visual, and approachable for students.</li>
+            <li>Used as an Open Days demonstrator for public-facing robotics outreach.</li>
           </ul>
+        </li>
+        <li>
+          <h3>Why it matters</h3>
+          <p>
+            PID can look abstract when it is only presented as equations. This demo turns the same ideas into a
+            visible loop: change the tuning, watch the behavior, and discuss why the system becomes faster, slower,
+            smoother, or unstable.
+          </p>
         </li>
         <li>
           <h3>Repository</h3>
