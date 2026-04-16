@@ -8,13 +8,19 @@ layout: none
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects – Simone Rotondi</title>
-  <meta name="description" content="Selected robotics and control projects by Simone Rotondi." />
+  <meta name="description"
+    content="Selected robotics and control projects by Simone Rotondi, including Colored Ball Balancing, 3LinerLeaderLess, and WIP-ARMS." />
+  <meta name="keywords"
+    content="robotics projects, control, colored ball balancing, multiple shooting, embodied intelligence, Simone Rotondi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://spbisc97.github.io/projects.html" />
   <meta property="og:title" content="Projects – Simone Rotondi" />
   <meta property="og:description"
-    content="Soft manipulation experiments, RTK/GNSS navigation, and robotics utilities." />
+    content="Selected open-source robotics and control projects with links to GitHub repositories." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://spbisc97.github.io/projects.html" />
   <meta property="og:image" content="https://spbisc97.github.io/assets/img/placeholder-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -49,8 +55,8 @@ layout: none
     <section class="section">
       <header>
         <h1>Projects</h1>
-        <p class="lead">Selected work across soft manipulation, navigation, and robotics tooling. Update any links or
-          details as you publish more.</p>
+        <p class="lead">A readable overview of selected projects. Most work is documented directly on GitHub so it is
+          easy to inspect, reuse, and extend.</p>
       </header>
       <div class="btn-row">
         <a class="btn primary button-link" href="mailto:rotondi97simone+git@gmail.com">Get in touch</a>
@@ -60,27 +66,26 @@ layout: none
 
     <section id="soft-manipulation" class="section">
       <header>
-        <h2>Soft manipulation experiments at INRIA</h2>
-        <p>Robots manipulating flexible and soft objects with compliant control, sensing, and simulation-to-real
-          workflows.</p>
+        <h2>Colored Ball Balancing (NIKE)</h2>
+        <p>Control-focused project centered on balancing behavior in a physical setup.</p>
       </header>
       <ul class="clean-list">
         <li>
-          <h3>Overview</h3>
+          <h3>What this project is about</h3>
           <p>
-            Researching strategies for handling deformable objects with precise yet adaptive control.
-            Building pipelines that span simulation, perception, and real hardware.
+            A practical project exploring how to build stable, repeatable balancing behavior for a dynamic physical
+            task.
           </p>
           <ul>
-            <li>Designed compliant control loops and safety constraints for soft-object tasks.</li>
-            <li>Built data collection and calibration utilities for tactile/vision sensors.</li>
-            <li>Iterated on sim-to-real transfer with domain randomization and validation steps.</li>
+            <li>Emphasis on control quality and robustness.</li>
+            <li>Project structure kept simple and readable for future iterations.</li>
+            <li>Open repository for transparent development.</li>
           </ul>
         </li>
         <li>
-          <h3>Useful links</h3>
+          <h3>Repository</h3>
           <p>
-            <a href="#">GitHub repo</a> / <a href="#">PDF</a> / <a href="#">Demo video</a>
+            <a href="https://github.com/spbisc97/ColoredBallBalancing" target="_blank">github.com/spbisc97/ColoredBallBalancing</a>
           </p>
         </li>
       </ul>
@@ -88,24 +93,23 @@ layout: none
 
     <section id="rtk-gnss" class="section">
       <header>
-        <h2>RTK / GNSS projects for ANAS and ESA</h2>
-        <p>High-precision positioning, control, and navigation in infrastructure and space-related environments.</p>
+        <h2>3LinerLeaderLess (Multiple Shooting)</h2>
+        <p>Optimization and trajectory-oriented work with a multiple-shooting perspective.</p>
       </header>
       <ul class="clean-list">
         <li>
-          <h3>Highlights</h3>
-          <p>Developed GNSS/RTK pipelines for reliable localization in challenging settings, integrating sensor fusion
-            and control logic.</p>
+          <h3>What this project is about</h3>
+          <p>Built around practical optimization workflows and algorithmic experimentation.</p>
           <ul>
-            <li>Configured RTK corrections and monitoring for on-site deployments.</li>
-            <li>Improved navigation stability via filtering, calibration, and fault detection.</li>
-            <li>Documented playbooks for reproducible field testing and data review.</li>
+            <li>Focus on model-driven reasoning and iteration speed.</li>
+            <li>Readable implementation for easier maintenance.</li>
+            <li>Suitable as a base for further research experiments.</li>
           </ul>
         </li>
         <li>
-          <h3>Useful links</h3>
+          <h3>Repository</h3>
           <p>
-            <a href="#">GitHub repo</a> / <a href="#">PDF</a> / <a href="#">Demo video</a>
+            <a href="https://github.com/spbisc97/3LinerLeaderLess" target="_blank">github.com/spbisc97/3LinerLeaderLess</a>
           </p>
         </li>
       </ul>
@@ -113,24 +117,23 @@ layout: none
 
     <section id="utilities" class="section">
       <header>
-        <h2>Robotics utilities and open source</h2>
-        <p>Calibration scripts, data pipelines, and helper tools to support experiments and quick iterations.</p>
+        <h2>WIP-ARMS</h2>
+        <p>Work-in-progress robotics project for ongoing development and prototyping.</p>
       </header>
       <ul class="clean-list">
         <li>
-          <h3>Toolkit</h3>
-          <p>Small utilities for ROS bag processing, sensor alignment, and quick automation. Meant to accelerate
-            experimentation and reproducibility.</p>
+          <h3>What this project is about</h3>
+          <p>Current exploratory repository where new ideas are tested and progressively structured.</p>
           <ul>
-            <li>Sensor calibration helpers (extrinsics, timestamp alignment).</li>
-            <li>Data collection templates and logging dashboards.</li>
-            <li>Reusable scripts for plotting, validation, and experiment bookkeeping.</li>
+            <li>Rapid iteration on robotics components.</li>
+            <li>Practical code organization that can evolve over time.</li>
+            <li>Useful sandbox for future publication-ready work.</li>
           </ul>
         </li>
         <li>
-          <h3>Useful links</h3>
+          <h3>Repository</h3>
           <p>
-            <a href="#">GitHub repo</a> / <a href="#">PDF</a> / <a href="#">Demo video</a>
+            <a href="https://github.com/spbisc97/WIP-ARMS" target="_blank">github.com/spbisc97/WIP-ARMS</a>
           </p>
         </li>
       </ul>
@@ -139,8 +142,8 @@ layout: none
     <section class="section">
       <header>
         <h2>Want a deeper dive?</h2>
-        <p class="lead">I’m happy to share notes, datasets, or code snippets. Reach out and tell me what you’re
-          exploring.</p>
+        <p class="lead">If you are working on related problems, feel free to reach out. I am happy to discuss methods,
+          implementation choices, and possible collaborations.</p>
       </header>
       <div class="btn-row">
         <a class="btn primary button-link" href="mailto:rotondi97simone+git@gmail.com">Email Simone</a>
