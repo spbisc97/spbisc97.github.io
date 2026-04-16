@@ -132,6 +132,23 @@ header.site-header {
   font-weight: 500;
 }
 
+.brainjuice-header {
+  text-align: center;
+}
+
+.brainjuice-logo {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.25rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.brainjuice-actions {
+  text-align: center;
+}
+
 .section {
   margin: 3rem 0;
 }

@@ -25,7 +25,7 @@ The repository is organized for simplicity and ease of maintenance.
 ### Assets (`/assets`)
 -   `css/styles.css`: **Global Styles**. Handles layout, typography, and theming. 
     -   *Key:* The `:root` selector defines CSS variables (colors, fonts) for easy theming (e.g., `--accent` color).
--   `img/`: **Images**. Stores static assets like profile photos (`simone_sapienza.jpeg`), logos (`logo.ico`), and placeholders.
+-   `img/`: **Images**. Stores static assets like profile photos (`simone_sapienza.jpeg`) and logos (`logo.ico`).
 
 ## 3. Development & Maintenance
 Since this is a static site, no build process is strictly required for local development.
