@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Localyte – Simone Rotondi</title>
+  <meta name="description"
+    content="Localyte develops AI-enhanced inertial sensing for reliable navigation when external references fail." />
+  <meta name="keywords"
+    content="Localyte, inertial sensing, IMU, sensor fusion, robotics, UAV, satellites, navigation, Simone Rotondi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://spbisc97.github.io/localyte.html" />
+  <meta property="og:title" content="Localyte – Simone Rotondi" />
+  <meta property="og:description"
+    content="AI-enhanced inertial sensing for reliable navigation when GNSS, vision, odometry, or other external references fail." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://spbisc97.github.io/localyte.html" />
+  <meta property="og:image" content="https://spbisc97.github.io/assets/img/logo.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260416" />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo.ico" />
+</head>
+
+<body id="top">
+  <header class="site-header">
+    <div class="page navbar">
+      <a class="brand" href="index.html" aria-label="Home">Simone Rotondi</a>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html#about">About</a>
+        <a href="projects.html">Work / Projects</a>
+        <a href="index.html#now">Now</a>
+        <a href="brainjuice.html">BrainJuice</a>
+        <a href="localyte.html">Localyte</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="utility-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">☀️</button>
+        <a class="mail-btn button-link" href="mailto:rotondi97simone+git@gmail.com">Email me</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section">
+      <header>
+        <h1>Localyte</h1>
+        <p class="lead">
+          AI-enhanced inertial sensing for reliable navigation when external references fail.
+        </p>
+      </header>
+      <p>
+        Localyte is the deep-tech startup I co-founded to make motion sensing and navigation more reliable through
+        software. It sits at the intersection of robotics, sensor fusion, embedded AI, and real-world industrial
+        validation.
+      </p>
+      <p>
+        The idea is simple: many systems already have inertial sensors, but those sensors drift over time. Localyte
+        improves the quality of the motion data already available, without forcing a hardware redesign.
+      </p>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2>The problem</h2>
+      </header>
+      <p>
+        Drones, robots, vehicles, satellites, and industrial measurement systems rely on IMUs to estimate how they move.
+        IMUs are fast and compact, but their errors accumulate. When GNSS, vision, odometry, or other external
+        references become weak or unavailable, drift becomes a serious limitation.
+      </p>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2>Our approach</h2>
+      </header>
+      <p>
+        Localyte works as a software layer between the IMU and the existing navigation or control stack. It analyzes
+        inertial signals in real time, recognizes motion patterns, and applies dynamic corrections to reduce drift,
+        bias, and non-linear errors.
+      </p>
+      <ul class="clean-list">
+        <li>
+          <h3>Software-first</h3>
+          <p>Improve the sensors already on the platform instead of adding more hardware.</p>
+        </li>
+        <li>
+          <h3>Compatible by design</h3>
+          <p>Provide better inertial data to existing estimators, autopilots, and navigation pipelines.</p>
+        </li>
+        <li>
+          <h3>Physics-aware AI</h3>
+          <p>Use learning where it helps, while respecting the dynamics of the physical system.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2>Applications</h2>
+      </header>
+      <ul class="clean-list">
+        <li>
+          <h3>Industrial testing and NDT</h3>
+          <p>
+            Segment operator motion and associate measurements with the correct position on a test surface, reducing
+            manual post-processing and making workflows more repeatable.
+          </p>
+        </li>
+        <li>
+          <h3>UAVs</h3>
+          <p>
+            Improve navigation continuity in GNSS-challenged missions by feeding more reliable inertial data to the
+            existing autopilot or estimator.
+          </p>
+        </li>
+        <li>
+          <h3>Space and small satellites</h3>
+          <p>
+            Reduce gyro drift during periods where absolute attitude updates are unavailable, supporting better pointing
+            continuity without adding hardware.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2>Current direction</h2>
+      </header>
+      <p>
+        Localyte is being validated across different sensor qualities and use cases, from low-cost IMUs to higher-grade
+        inertial sensors. The long-term goal is a plug-and-play inertial enhancement layer: installable, configurable,
+        and compatible with existing navigation stacks.
+      </p>
+      <p>
+        My work focuses on AI-based correction models, sensor-fusion ideas, validation pipelines, and the translation
+        of research prototypes into deployable software.
+      </p>
+    </section>
+
+    <section class="section">
+      <header>
+        <h2>Why I am building it</h2>
+      </header>
+      <p>
+        I am interested in systems that survive messy physical conditions: noisy sensors, imperfect models, missing
+        references, and changing environments. Localyte is a way to bring that research perspective into a real product:
+        improving the signals that robots, drones, vehicles, and satellites depend on to understand their own motion.
+      </p>
+      <div class="btn-row">
+        <a class="btn primary button-link" href="https://localyte.tech/" target="_blank">Visit Localyte</a>
+        <a class="btn primary button-link" href="mailto:rotondi97simone+git@gmail.com">Ask about Localyte</a>
+        <a class="btn button-link" href="index.html">Back to home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page">
+    <div>© <span id="year"></span> Simone Rotondi • Built with care on GitHub Pages. <a class="top-link"
+        href="#top">Back to top</a></div>
+  </footer>
+
+  <script>
+    const body = document.body;
+    const themeToggle = document.getElementById('theme-toggle');
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (storedTheme) body.setAttribute('data-theme', storedTheme); else if (prefersDark) body.setAttribute('data-theme', 'dark');
+    function updateThemeIcon() { const isDark = body.getAttribute('data-theme') === 'dark'; themeToggle.textContent = isDark ? '🌙' : '☀️'; themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme'); }
+    function toggleTheme() { const isDark = body.getAttribute('data-theme') === 'dark'; const newTheme = isDark ? 'light' : 'dark'; body.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); updateThemeIcon(); }
+    if (themeToggle) themeToggle.addEventListener('click', toggleTheme); updateThemeIcon();
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    if (menuToggle && navLinks) { menuToggle.addEventListener('click', () => { const isOpen = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', isOpen); }); }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

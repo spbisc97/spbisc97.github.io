@@ -95,8 +95,15 @@ header.site-header {
 }
 
 .brand {
+  color: var(--ink);
   font-weight: 600;
   font-size: 1rem;
+  text-decoration: none;
+}
+
+.brand:hover {
+  color: var(--accent);
+  background: transparent;
 }
 
 .nav-links {
