@@ -139,10 +139,12 @@ header.site-header {
   font-weight: 500;
 }
 
+.logo-header,
 .brainjuice-header {
   text-align: center;
 }
 
+.page-logo,
 .brainjuice-logo {
   display: block;
   width: 140px;
