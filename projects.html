@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects – Simone Rotondi</title>
   <meta name="description"
-    content="Selected robotics and control projects by Simone Rotondi, including a PID teaching demonstrator, multiple-shooting work, and nonlinear optimal control prototypes." />
+    content="Selected robotics and control projects by Simone Rotondi, including nonlinear optimal control prototypes and a PID teaching demonstrator." />
   <meta name="keywords"
-    content="robotics projects, control, colored ball balancing, multiple shooting, embodied intelligence, Simone Rotondi" />
+    content="robotics projects, control, colored ball balancing, embodied intelligence, Simone Rotondi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://spbisc97.github.io/projects.html" />
   <meta property="og:title" content="Projects – Simone Rotondi" />
@@ -30,10 +30,11 @@
         Menu
       </button>
       <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-        <a href="index.html#about">About</a>
-        <a href="projects.html">Work / Projects</a>
-        <a href="index.html#now">Now</a>
-        <a href="localyte.html">Localyte</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#publications">Publications</a>
+        <a href="index.html#localyte">Localyte</a>
+        <a href="index.html#about">Background</a>
+        <a href="projects.html">Projects</a>
         <a href="index.html#contact">Contact</a>
       </nav>
       <div class="utility-actions">
@@ -57,9 +58,43 @@
       </div>
     </section>
 
+    <section id="wip-arms" class="section">
+      <header>
+        <h2>Nonlinear optimal control (iLQR / Gauss-Newton shooting)</h2>
+        <p>Iterative Gauss-Newton shooting methods for nonlinear optimal control.</p>
+      </header>
+      <ul class="clean-list">
+        <li>
+          <h3>What this project is about</h3>
+          <p>
+            A repository for implementing and testing iterative shooting methods for nonlinear optimal control, with
+            examples built around underactuated benchmark systems.
+          </p>
+          <ul>
+            <li>MATLAB implementation of iLQR / Gauss-Newton shooting workflows.</li>
+            <li>Simulation examples for cart-pole swing-up and two-wheeled inverted-pendulum systems.</li>
+            <li>Julia and MeshCat material for visualizing inverted-pendulum behavior.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>Why it matters</h3>
+          <p>
+            The project is useful as a bridge between optimal-control algorithms and physical intuition: the same
+            solver structure can be inspected in code, tested in simulation, and related to familiar unstable systems.
+          </p>
+        </li>
+        <li>
+          <h3>Repository</h3>
+          <p>
+            <a href="https://github.com/spbisc97/WIP-ARMS" target="_blank">github.com/spbisc97/WIP-ARMS</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+
     <section id="colored-ball-balancing" class="section">
       <header>
-        <h2>Colored Ball Balancing (NIKE)</h2>
+        <h2>Colored Ball Balancing</h2>
         <p>A physical PID demonstrator for making feedback control visible and memorable.</p>
       </header>
       <ul class="clean-list">
@@ -87,64 +122,6 @@
           <h3>Repository</h3>
           <p>
             <a href="https://github.com/spbisc97/ColoredBallBalancing" target="_blank">github.com/spbisc97/ColoredBallBalancing</a>
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="rtk-gnss" class="section">
-      <header>
-        <h2>3LinerLeaderLess (Multiple Shooting)</h2>
-        <p>Optimization and trajectory-oriented work with a multiple-shooting perspective.</p>
-      </header>
-      <ul class="clean-list">
-        <li>
-          <h3>What this project is about</h3>
-          <p>Built around practical optimization workflows and algorithmic experimentation.</p>
-          <ul>
-            <li>Focus on model-driven reasoning and iteration speed.</li>
-            <li>Readable implementation for easier maintenance.</li>
-            <li>Suitable as a base for further research experiments.</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Repository</h3>
-          <p>
-            <a href="https://github.com/spbisc97/3LinerLeaderLess" target="_blank">github.com/spbisc97/3LinerLeaderLess</a>
-          </p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="wip-arms" class="section">
-      <header>
-        <h2>WIP-ARMS / ILQR-GNMS</h2>
-        <p>Iterative Gauss-Newton shooting methods for nonlinear optimal control.</p>
-      </header>
-      <ul class="clean-list">
-        <li>
-          <h3>What this project is about</h3>
-          <p>
-            A repository for implementing and testing iterative shooting methods for nonlinear optimal control, with
-            examples built around underactuated benchmark systems.
-          </p>
-          <ul>
-            <li>MATLAB implementation of iLQR / Gauss-Newton shooting workflows.</li>
-            <li>Simulation examples for cart-pole swing-up and two-wheeled inverted-pendulum systems.</li>
-            <li>Julia and MeshCat material for visualizing inverted-pendulum behavior.</li>
-          </ul>
-        </li>
-        <li>
-          <h3>Why it matters</h3>
-          <p>
-            The project is useful as a bridge between optimal-control algorithms and physical intuition: the same
-            solver structure can be inspected in code, tested in simulation, and related to familiar unstable systems.
-          </p>
-        </li>
-        <li>
-          <h3>Repository</h3>
-          <p>
-            <a href="https://github.com/spbisc97/WIP-ARMS" target="_blank">github.com/spbisc97/WIP-ARMS</a>
           </p>
         </li>
       </ul>

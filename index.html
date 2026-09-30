@@ -34,7 +34,8 @@
     "email": "mailto:simone.rotondi@inria.fr",
     "affiliation": { "@type": "Organization", "name": "Inria Rennes – Rainbow team", "url": "https://team.inria.fr/rainbow/" },
     "worksFor": { "@type": "Organization", "name": "Localyte", "url": "https://localyte.tech/" },
-    "knowsAbout": ["robotics", "control theory", "deformable object manipulation", "visual servoing", "inertial navigation", "IMU", "sensor fusion"],
+    "alumniOf": { "@type": "Organization", "name": "Thales Alenia Space" },
+    "knowsAbout": ["GNSS", "safe reinforcement learning", "spacecraft rendezvous and docking", "robotics", "control theory", "deformable object manipulation", "visual servoing", "inertial navigation", "IMU", "sensor fusion"],
     "sameAs": [
       "https://team.inria.fr/rainbow/fr/simone-rotondi/",
       "https://www.semanticscholar.org/author/Simone-Rotondi/2237761614",
@@ -54,10 +55,11 @@
         Menu
       </button>
       <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="projects.html">Work / Projects</a>
-        <a href="#now">Now</a>
-        <a href="localyte.html">Localyte</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#localyte">Localyte</a>
+        <a href="#about">Background</a>
+        <a href="projects.html">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="utility-actions">
@@ -74,6 +76,7 @@
           <h1>Simone Rotondi</h1>
           <p class="lead" style="color: var(--ink);">
             Robotics researcher at Inria and co-founder of Localyte.
+            Previously GNSS R&amp;D at Thales Alenia Space.
           </p>
           <p>
             <strong>Research:</strong> in the Rainbow team at Inria Rennes, I study how robots can control
@@ -86,12 +89,12 @@
 
           <div class="btn-row" style="margin-top: 1.5rem;">
             <a class="btn primary button-link" href="#research">For researchers</a>
-            <a class="btn primary button-link" href="localyte.html">For industry: Localyte</a>
+            <a class="btn primary button-link" href="#localyte">For industry: Localyte</a>
           </div>
 
           <div class="intro-links" style="margin-top: 1rem;">
             <a href="https://team.inria.fr/rainbow/fr/simone-rotondi/" target="_blank">Inria Profile</a> /
-            <a href="https://www.semanticscholar.org/author/Simone-Rotondi/2237761614" target="_blank">Publications</a> /
+            <a href="#publications">Publications</a> /
             <a href="https://github.com/spbisc97" target="_blank">GitHub</a> /
             <a href="https://www.linkedin.com/in/simone-rotondi" target="_blank">LinkedIn</a>
           </div>
@@ -125,8 +128,74 @@
       </figure>
       <p>Supervised by Paolo Robuffo Giordano, Alexandre Krupa, and Tommaso Belvedere.
         PhD started in November 2025.</p>
-      <p><a href="https://www.semanticscholar.org/author/Simone-Rotondi/2237761614">Publications on Semantic Scholar →</a><br />
+      <h3 id="publications">Publications</h3>
+      <ul class="clean-list">
+        <li>
+          <p>
+            <strong>S. Rotondi</strong>, V. Becchetti, S. Carletta, A. Giuseppi.
+            <a href="https://doi.org/10.52202/083087-0116" target="_blank">Safe Reinforcement Learning for Autonomous
+              Rendezvous and Proximity Operations: Balancing Safety and Performance in CubeSat Docking Missions</a>.
+            IAF Astrodynamics Symposium, 76th International Astronautical Congress (IAC 2025), Sydney, Australia, 2025.
+            <a href="https://iris.uniroma1.it/retrieve/36dc2389-89b1-4c06-b13f-e6efe7c42dd1/Rotondi_Safe-Reinforcement-Learning_postprint_2025.pdf" target="_blank">PDF</a>
+          </p>
+          <p>Soft Actor-Critic extended with a safety critic, so a CubeSat learns to dock autonomously while respecting
+            operational safety constraints.</p>
+        </li>
+      </ul>
+      <p><a href="https://www.semanticscholar.org/author/Simone-Rotondi/2237761614">All publications on Semantic Scholar →</a><br />
         <a href="https://team.inria.fr/rainbow/fr/simone-rotondi/">Research profile at Inria →</a></p>
+    </section>
+
+    <section id="localyte" class="section">
+      <header>
+        <h2>Localyte</h2>
+      </header>
+      <p>
+        IMUs drift. When GNSS, vision or odometry drop out, that drift is what breaks navigation on drones, robots,
+        vehicles and small satellites. Localyte is a software layer between the IMU and the existing navigation
+        stack: it corrects drift, bias and non-linear errors in real time, with physics-aware AI and no hardware
+        redesign.
+      </p>
+      <p>Applications: UAV navigation in GNSS-challenged missions, gyro drift on small satellites, and
+        motion tracking for industrial testing (NDT).</p>
+      <div class="btn-row">
+        <a class="btn primary button-link" href="https://localyte.tech/" target="_blank">Visit localyte.tech</a>
+        <a class="btn primary button-link" href="mailto:simone.rotondi@localyte.tech">Talk to us about Localyte</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <header>
+        <h2>Background</h2>
+      </header>
+      <p>
+        I work at the intersection of <strong>control theory</strong>, <strong>robotics</strong> and
+        <strong>navigation</strong>, with a focus on making physical systems reliable despite imperfect models
+        and measurements. Based in Rennes, France.
+      </p>
+      <ul class="clean-list">
+        <li>
+          <h3>PhD researcher · Inria Rennes, Rainbow team</h3>
+          <p><time datetime="2025-11">November 2025</time> – present</p>
+          <p>Visual shape control of deformable objects under model uncertainty.</p>
+        </li>
+        <li>
+          <h3>Co-founder · <a href="#localyte">Localyte</a></h3>
+          <p><time datetime="2024-12">December 2024</time> – present</p>
+          <p>AI-enhanced inertial sensing for navigation when GNSS and other external references fail.</p>
+        </li>
+        <li>
+          <h3>System Engineer · Thales Alenia Space, Advanced Projects</h3>
+          <p><time datetime="2024-07">July 2024</time> – <time datetime="2025-10">October 2025</time> · Rome</p>
+          <p>Precise localization on Earth and Moon: GNSS R&amp;D including the Galileo High Accuracy Service (HAS)
+            and Moonlight, plus GNSS radio-occultation work for atmospheric estimation and weather forecasting.</p>
+        </li>
+        <li>
+          <h3>Control Engineer · CRAT, with Thales Alenia Space</h3>
+          <p><time datetime="2023-11">November 2023</time> – <time datetime="2024-06">June 2024</time> · Rome</p>
+          <p>High Accuracy Service for the Galileo satellite system, with the Thales Alenia Space R&amp;D team.</p>
+        </li>
+      </ul>
     </section>
 
     <section id="work" class="section">
@@ -135,67 +204,23 @@
       </header>
       <ul class="clean-list">
         <li>
-          <h3><a href="https://github.com/spbisc97/ColoredBallBalancing" target="_blank">Colored Ball Balancing
-              (NIKE)</a></h3>
+          <h3><a href="https://github.com/spbisc97/WIP-ARMS" target="_blank">Nonlinear optimal control (iLQR / Gauss-Newton shooting)</a></h3>
           <p>
-            A hands-on PID demonstrator where a colored ball makes feedback control visible. Used with students
-            and at Open Days to connect tuning choices with real physical behavior.
+            Iterative Gauss-Newton shooting methods for underactuated systems, from cart-pole swing-up to a
+            two-wheeled inverted pendulum. MATLAB solvers with Julia visualizations.
           </p>
         </li>
         <li>
-          <h3><a href="https://github.com/spbisc97/3LinerLeaderLess" target="_blank">3LinerLeaderLess
-              (Multiple Shooting)</a></h3>
-          <p>Optimization and trajectory design work with an emphasis on practical reproducibility.</p>
-        </li>
-        <li>
-          <h3><a href="https://github.com/spbisc97/WIP-ARMS" target="_blank">WIP-ARMS / ILQR-GNMS</a></h3>
+          <h3><a href="https://github.com/spbisc97/ColoredBallBalancing" target="_blank">Colored Ball Balancing</a></h3>
           <p>
-            Nonlinear optimal control experiments with iterative Gauss-Newton shooting methods, MATLAB simulations,
-            and Julia visualizations for inverted-pendulum systems.
+            A physical PID demonstrator that makes feedback control visible, used with students and at
+            university Open Days.
           </p>
         </li>
       </ul>
-      <p><a href="projects.html">See full project context →</a></p>
+      <p><a href="projects.html">Project details →</a></p>
     </section>
 
-    <section id="now" class="section">
-      <header>
-        <h2>Now</h2>
-        <p>Updated <time datetime="2026-09-30">30 September 2026</time></p>
-      </header>
-      <ul class="clean-list">
-        <li>
-          <h3>Research at Inria</h3>
-          <p>Working on visual shape control of deformable objects under model uncertainty in the Rainbow team.</p>
-        </li>
-        <li>
-          <h3>Building Localyte</h3>
-          <p>Developing software for inertial sensing and navigation.
-            <a href="localyte.html">More about Localyte →</a></p>
-        </li>
-        <li>
-          <h3>brAIns 2026</h3>
-          <p>BrainJuice’s event on neuroscience and AI takes place on 30 October at Sapienza Università di Roma.
-            <a href="brainjuice.html#brains-2026">Event details and registration →</a></p>
-        </li>
-      </ul>
-    </section>
-
-    <section id="about" class="section">
-      <header>
-        <h2>About</h2>
-      </header>
-      <div class="profile-block">
-        <div>
-          <p>
-            I work at the intersection of <strong>control theory</strong> and <strong>robotics</strong>,
-            with a focus on making physical systems reliable despite imperfect models and measurements.
-          </p>
-          <p>Based in Rennes, France. Alongside my PhD, I co-founded <a href="localyte.html">Localyte</a>,
-            a startup working on inertial sensing and navigation. I also share teaching demos and open-source projects.</p>
-        </div>
-      </div>
-    </section>
 
     <section id="contact" class="section">
       <header>
