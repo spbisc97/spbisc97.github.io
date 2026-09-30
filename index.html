@@ -35,7 +35,7 @@
     "affiliation": { "@type": "Organization", "name": "Inria Rennes – Rainbow team", "url": "https://team.inria.fr/rainbow/" },
     "worksFor": { "@type": "Organization", "name": "Localyte", "url": "https://localyte.tech/" },
     "alumniOf": { "@type": "Organization", "name": "Thales Alenia Space" },
-    "knowsAbout": ["GNSS", "robotics", "control theory", "deformable object manipulation", "visual servoing", "inertial navigation", "IMU", "sensor fusion"],
+    "knowsAbout": ["GNSS", "safe reinforcement learning", "spacecraft rendezvous and docking", "robotics", "control theory", "deformable object manipulation", "visual servoing", "inertial navigation", "IMU", "sensor fusion"],
     "sameAs": [
       "https://team.inria.fr/rainbow/fr/simone-rotondi/",
       "https://www.semanticscholar.org/author/Simone-Rotondi/2237761614",
@@ -55,9 +55,11 @@
         Menu
       </button>
       <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-        <a href="#about">Background</a>
-        <a href="projects.html">Work / Projects</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
         <a href="#localyte">Localyte</a>
+        <a href="#about">Background</a>
+        <a href="projects.html">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="utility-actions">
@@ -92,7 +94,7 @@
 
           <div class="intro-links" style="margin-top: 1rem;">
             <a href="https://team.inria.fr/rainbow/fr/simone-rotondi/" target="_blank">Inria Profile</a> /
-            <a href="https://www.semanticscholar.org/author/Simone-Rotondi/2237761614" target="_blank">Publications</a> /
+            <a href="#publications">Publications</a> /
             <a href="https://github.com/spbisc97" target="_blank">GitHub</a> /
             <a href="https://www.linkedin.com/in/simone-rotondi" target="_blank">LinkedIn</a>
           </div>
@@ -126,7 +128,21 @@
       </figure>
       <p>Supervised by Paolo Robuffo Giordano, Alexandre Krupa, and Tommaso Belvedere.
         PhD started in November 2025.</p>
-      <p><a href="https://www.semanticscholar.org/author/Simone-Rotondi/2237761614">Publications on Semantic Scholar →</a><br />
+      <h3 id="publications">Publications</h3>
+      <ul class="clean-list">
+        <li>
+          <p>
+            <strong>S. Rotondi</strong>, V. Becchetti, S. Carletta, A. Giuseppi.
+            <a href="https://doi.org/10.52202/083087-0116" target="_blank">Safe Reinforcement Learning for Autonomous
+              Rendezvous and Proximity Operations: Balancing Safety and Performance in CubeSat Docking Missions</a>.
+            IAF Astrodynamics Symposium, 76th International Astronautical Congress (IAC 2025), Sydney, Australia, 2025.
+            <a href="https://iris.uniroma1.it/retrieve/36dc2389-89b1-4c06-b13f-e6efe7c42dd1/Rotondi_Safe-Reinforcement-Learning_postprint_2025.pdf" target="_blank">PDF</a>
+          </p>
+          <p>Soft Actor-Critic extended with a safety critic, so a CubeSat learns to dock autonomously while respecting
+            operational safety constraints.</p>
+        </li>
+      </ul>
+      <p><a href="https://www.semanticscholar.org/author/Simone-Rotondi/2237761614">All publications on Semantic Scholar →</a><br />
         <a href="https://team.inria.fr/rainbow/fr/simone-rotondi/">Research profile at Inria →</a></p>
     </section>
 
