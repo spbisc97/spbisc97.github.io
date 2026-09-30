@@ -2,7 +2,7 @@
   --bg: #ffffff;
   --surface: #ffffff;
   --ink: #333333;
-  --muted: #777777;
+  --muted: #666666;
   --line: #eeeeee;
   --accent: #222222;
   /* Minimal accent is just dark gray/black */
@@ -240,4 +240,90 @@ footer {
     height: 100px;
     margin-bottom: 0.5rem;
   }
+}
+
+/* Navigation stays visible without JavaScript. */
+.navbar {
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+}
+
+.brainjuice-actions {
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .navbar .brand {
+    flex: 1;
+  }
+
+  .hamburger {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    background: var(--surface);
+    color: var(--ink);
+    font: inherit;
+    cursor: pointer;
+    min-height: 44px;
+  }
+
+  .nav-ready .hamburger {
+    display: inline-block;
+  }
+
+  .utility-actions button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .nav-links {
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-links a {
+    padding: 0.65rem 0;
+  }
+
+  .nav-ready .nav-links {
+    display: none;
+  }
+
+  .nav-ready .nav-links.open {
+    display: flex;
+  }
+}
+
+.research-demo {
+  margin: 1.25rem 0 2rem;
+}
+
+.research-demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #111;
+}
+
+.research-demo figcaption {
+  margin-top: 0.75rem;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
