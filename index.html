@@ -57,8 +57,7 @@
       <nav class="nav-links" id="nav-links" aria-label="Main navigation">
         <a href="#about">Background</a>
         <a href="projects.html">Work / Projects</a>
-        <a href="#now">Now</a>
-        <a href="localyte.html">Localyte</a>
+        <a href="#localyte">Localyte</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="utility-actions">
@@ -88,7 +87,7 @@
 
           <div class="btn-row" style="margin-top: 1.5rem;">
             <a class="btn primary button-link" href="#research">For researchers</a>
-            <a class="btn primary button-link" href="localyte.html">For industry: Localyte</a>
+            <a class="btn primary button-link" href="#localyte">For industry: Localyte</a>
           </div>
 
           <div class="intro-links" style="margin-top: 1rem;">
@@ -131,6 +130,24 @@
         <a href="https://team.inria.fr/rainbow/fr/simone-rotondi/">Research profile at Inria →</a></p>
     </section>
 
+    <section id="localyte" class="section">
+      <header>
+        <h2>Localyte</h2>
+      </header>
+      <p>
+        IMUs drift. When GNSS, vision or odometry drop out, that drift is what breaks navigation on drones, robots,
+        vehicles and small satellites. Localyte is a software layer between the IMU and the existing navigation
+        stack: it corrects drift, bias and non-linear errors in real time, with physics-aware AI and no hardware
+        redesign.
+      </p>
+      <p>Applications: UAV navigation in GNSS-challenged missions, gyro drift on small satellites, and
+        motion tracking for industrial testing (NDT).</p>
+      <div class="btn-row">
+        <a class="btn primary button-link" href="https://localyte.tech/" target="_blank">Visit localyte.tech</a>
+        <a class="btn primary button-link" href="mailto:simone.rotondi@localyte.tech">Talk to us about Localyte</a>
+      </div>
+    </section>
+
     <section id="about" class="section">
       <header>
         <h2>Background</h2>
@@ -147,7 +164,7 @@
           <p>Visual shape control of deformable objects under model uncertainty.</p>
         </li>
         <li>
-          <h3>Co-founder · <a href="localyte.html">Localyte</a></h3>
+          <h3>Co-founder · <a href="#localyte">Localyte</a></h3>
           <p><time datetime="2024-12">December 2024</time> – present</p>
           <p>AI-enhanced inertial sensing for navigation when GNSS and other external references fail.</p>
         </li>
@@ -171,50 +188,21 @@
       </header>
       <ul class="clean-list">
         <li>
-          <h3><a href="https://github.com/spbisc97/ColoredBallBalancing" target="_blank">Colored Ball Balancing
-              (NIKE)</a></h3>
+          <h3><a href="https://github.com/spbisc97/WIP-ARMS" target="_blank">Nonlinear optimal control (iLQR / Gauss-Newton shooting)</a></h3>
           <p>
-            A hands-on PID demonstrator where a colored ball makes feedback control visible. Used with students
-            and at Open Days to connect tuning choices with real physical behavior.
+            Iterative Gauss-Newton shooting methods for underactuated systems, from cart-pole swing-up to a
+            two-wheeled inverted pendulum. MATLAB solvers with Julia visualizations.
           </p>
         </li>
         <li>
-          <h3><a href="https://github.com/spbisc97/3LinerLeaderLess" target="_blank">3LinerLeaderLess
-              (Multiple Shooting)</a></h3>
-          <p>Optimization and trajectory design work with an emphasis on practical reproducibility.</p>
-        </li>
-        <li>
-          <h3><a href="https://github.com/spbisc97/WIP-ARMS" target="_blank">WIP-ARMS / ILQR-GNMS</a></h3>
+          <h3><a href="https://github.com/spbisc97/ColoredBallBalancing" target="_blank">Colored Ball Balancing</a></h3>
           <p>
-            Nonlinear optimal control experiments with iterative Gauss-Newton shooting methods, MATLAB simulations,
-            and Julia visualizations for inverted-pendulum systems.
+            A physical PID demonstrator that makes feedback control visible, used with students and at
+            university Open Days.
           </p>
         </li>
       </ul>
-      <p><a href="projects.html">See full project context →</a></p>
-    </section>
-
-    <section id="now" class="section">
-      <header>
-        <h2>Now</h2>
-        <p>Updated <time datetime="2026-09-30">30 September 2026</time></p>
-      </header>
-      <ul class="clean-list">
-        <li>
-          <h3>Research at Inria</h3>
-          <p>Working on visual shape control of deformable objects under model uncertainty in the Rainbow team.</p>
-        </li>
-        <li>
-          <h3>Building Localyte</h3>
-          <p>Developing software for inertial sensing and navigation.
-            <a href="localyte.html">More about Localyte →</a></p>
-        </li>
-        <li>
-          <h3>brAIns 2026</h3>
-          <p>BrainJuice’s event on neuroscience and AI takes place on 30 October at Sapienza Università di Roma.
-            <a href="brainjuice.html#brains-2026">Event details and registration →</a></p>
-        </li>
-      </ul>
+      <p><a href="projects.html">Project details →</a></p>
     </section>
 
 
