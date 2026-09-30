@@ -18,12 +18,7 @@
   <meta property="og:url" content="https://spbisc97.github.io/localyte.html" />
   <meta property="og:image" content="https://spbisc97.github.io/assets/img/Localyte-logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260416" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260930" />
   <link rel="icon" type="image/x-icon" href="assets/img/logo.ico" />
 </head>
 
@@ -31,10 +26,10 @@
   <header class="site-header">
     <div class="page navbar">
       <a class="brand" href="index.html" aria-label="Home">Simone Rotondi</a>
-      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" id="menu-toggle">
-        <span></span><span></span><span></span>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links" id="menu-toggle">
+        Menu
       </button>
-      <nav class="nav-links" id="nav-links">
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation">
         <a href="index.html#about">About</a>
         <a href="projects.html">Work / Projects</a>
         <a href="index.html#now">Now</a>
@@ -174,15 +169,43 @@
   <script>
     const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
-    const storedTheme = localStorage.getItem('theme');
+    let storedTheme;
+    try { storedTheme = localStorage.getItem('theme'); } catch (error) { /* Storage may be unavailable. */ }
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (storedTheme) body.setAttribute('data-theme', storedTheme); else if (prefersDark) body.setAttribute('data-theme', 'dark');
-    function updateThemeIcon() { const isDark = body.getAttribute('data-theme') === 'dark'; themeToggle.textContent = isDark ? '🌙' : '☀️'; themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme'); }
-    function toggleTheme() { const isDark = body.getAttribute('data-theme') === 'dark'; const newTheme = isDark ? 'light' : 'dark'; body.setAttribute('data-theme', newTheme); localStorage.setItem('theme', newTheme); updateThemeIcon(); }
-    if (themeToggle) themeToggle.addEventListener('click', toggleTheme); updateThemeIcon();
+    body.setAttribute('data-theme', storedTheme === 'dark' || (!storedTheme && prefersDark) ? 'dark' : 'light');
+    function updateThemeIcon() {
+      const isDark = body.getAttribute('data-theme') === 'dark';
+      themeToggle.textContent = isDark ? '🌙' : '☀️';
+      themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+    themeToggle.addEventListener('click', () => {
+      const theme = body.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      body.setAttribute('data-theme', theme);
+      try { localStorage.setItem('theme', theme); } catch (error) { /* Keep the theme for this visit. */ }
+      updateThemeIcon();
+    });
+    updateThemeIcon();
     const menuToggle = document.getElementById('menu-toggle');
     const navLinks = document.getElementById('nav-links');
-    if (menuToggle && navLinks) { menuToggle.addEventListener('click', () => { const isOpen = navLinks.classList.toggle('open'); menuToggle.setAttribute('aria-expanded', isOpen); }); }
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+    navLinks.addEventListener('click', (event) => {
+      if (event.target.closest('a')) closeMenu();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('open')) {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+    window.matchMedia('(max-width: 800px)').addEventListener('change', closeMenu);
+    body.classList.add('nav-ready');
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
